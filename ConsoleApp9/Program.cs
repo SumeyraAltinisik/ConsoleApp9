@@ -58,8 +58,15 @@
             return sonuc;
         }
         public static string SubstringX(string s, int start, int count)
-        {
-            return "";
+        {  
+            //return SubstringX(s, start).Take(count).ToString();
+            string sonuc = "";
+            for (int i = start; i < count; i++)
+            {
+                sonuc = sonuc + s[i];
+            }
+            return sonuc;
+
         }
         public static string PadLeftX(string s, int count, char c)
         {
