@@ -23,12 +23,12 @@
 
             Console.WriteLine(PadLeftX("Araba", 7, '*'));
         }
-        public static bool ContainsX(string s, char c)
+        public static bool ContainsX(string s, char c) //Burada bir method var. Bu method bir string bir char veriyor senden geriye true ya da false dönmeni bekliyor
         {
-            List<Char> chars = s.ToList();
-            foreach (var item in chars)
+            List<Char> chars = s.ToList(); //Char listesi içindekileri chars ile çekmiş
+            foreach (var item in chars)//chars içindekileri yazdırmak için döngü kullanmış
             {
-                if (item == c)
+                if (item == c) //Gelen sayı bana verilen C ye eşitse true döndür demiş
                 {
                     return true;
                 }
@@ -37,8 +37,8 @@
         }
         public static int IndexOfX(string s, char c)
         {
-            List<Char> chars = s.ToList();
-            for (int i = 0; i < chars.Count; i++)
+            List<Char> chars = s.ToList(); //bu da aynı sadece geriye int döndürüyor.
+            for (int i = 0; i < chars.Count; i++) //Burada liste uzunluğunu bilmediğimiz içib count kullandık
             {
                 if (chars[i] == c)
                 {
@@ -48,16 +48,16 @@
             }
             return 1;
         }
-        public static string SubstringX(string s, int start)
+        public static string SubstringX(string s, int start) //geriye string dönsün
         {
             string sonuc = "";
-            for (int i = start; i < s.Length; i++)
+            for (int i = start; i < s.Length; i++) //string olduğu için length
             {
-                sonuc = sonuc + s[i];
+                sonuc = sonuc + s[i]; //[] işaret var ise bu bir dizidir.
             }
             return sonuc;
         }
-        public static string SubstringX(string s, int start, int count)
+        public static string SubstringX(string s, int start, int count) //burda 2 sayı bir string geriye string dönsün
         {  
             //return SubstringX(s, start).Take(count).ToString();
             string sonuc = "";
@@ -68,7 +68,7 @@
             return sonuc;
 
         }
-        public static string PadLeftX(string s, int count, char c)
+        public static string PadLeftX(string s, int count, char c) //strin sayi ve karakter geriye string
         {
             if (s.Length >= count)
             {
