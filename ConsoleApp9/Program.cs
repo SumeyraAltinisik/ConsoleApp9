@@ -23,6 +23,7 @@
 
             Console.WriteLine(PadLeftX("Araba", 7, '*'));
         }
+        //en üsttede fonksiyonlar(method) çağırılıyor
         public static bool ContainsX(string s, char c) //Burada bir method var. Bu method bir string bir char veriyor senden geriye true ya da false dönmeni bekliyor
         {
             List<Char> chars = s.ToList(); //Char listesi içindekileri chars ile çekmiş
@@ -40,7 +41,7 @@
             List<Char> chars = s.ToList(); //bu da aynı sadece geriye int döndürüyor.
             for (int i = 0; i < chars.Count; i++) //Burada liste uzunluğunu bilmediğimiz içib count kullandık
             {
-                if (chars[i] == c)
+                if (chars[i] == c) //
                 {
                     return i;
                 }
